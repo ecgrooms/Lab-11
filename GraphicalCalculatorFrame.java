@@ -223,11 +223,7 @@ public class GraphicalCalculatorFrame extends JFrame
 			// If the mouse clicked within a region, set that region to be the selected region.
 			// TODO: check if a clicked point is within a region. If so, set that region to be selected.
 			
-			for(int i = 0; i < 5; i++) {
-				if(regions[i].contains(e.getX(), e.getY())) {
-					selectedRegion = i;
-				}
-			}
+			
 			
 			// Repaint the panel (this will implicitly call paintComponent):
 			this.repaint();
