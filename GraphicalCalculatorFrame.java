@@ -476,7 +476,6 @@ public class GraphicalCalculatorFrame extends JFrame
         		// TODO: attempt to modify the selected region in gcPanel with the new operand value.
         	boolean result = gcPanel.setSelectedRegionContents(operandEntry.getText());
         	
-        	
         	if(result == true) {
         		errorMessage.setText("");
         	}
@@ -500,6 +499,7 @@ public class GraphicalCalculatorFrame extends JFrame
          */
         setOperator.addActionListener((e) -> {
     		// TODO: attempt to modify the selected region in gcPanel with the new operator value.
+        	//add
         	if(add.isSelected()) {
         		boolean a =	gcPanel.setSelectedRegionContents(add.getText());
         		if(a == true) {
@@ -509,6 +509,7 @@ public class GraphicalCalculatorFrame extends JFrame
         			errorMessage.setText("Failed to set operator value");
         		}
         	}
+        	//subtract
         	else if(subtract.isSelected()) {
         		boolean s =	gcPanel.setSelectedRegionContents(subtract.getText());
         		if(s == true) {
@@ -518,6 +519,7 @@ public class GraphicalCalculatorFrame extends JFrame
         			errorMessage.setText("Failed to set operator value");
         		}
         	}
+        	//multiply
         	else{
         		boolean m =	gcPanel.setSelectedRegionContents(multiply.getText());
         		if(m == true) {
