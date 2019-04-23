@@ -311,35 +311,7 @@ public class GraphicalCalculatorFrame extends JFrame
 			// TODO: evaluate the expression. (operand0 operator0 operand1) operator1 operand2
 			int results = 0;
 			//add first
-			if(operators[0] == "+" && operators[1] == "+") {
-				results = operands[0] + operands[1] + operands[2];
-			}
-			else if(operators[0] == "+" && operators[1] == "-") {
-				results = operands[0] + operands[1] - operands[2];
-			}
-			else if(operators[0] == "+" && operators[1] == "*") {
-				results = (operands[0] + operands[1]) * operands[2];
-			}
-			// subtract first
-			else if(operators[0] == "-" && operators[1] == "-") {
-				results = (operands[0] - operands[1]) - operands[2];
-			}
-			else if(operators[0] == "-" && operators[1] == "+") {
-				results = (operands[0] - operands[1]) + operands[2];
-			}
-			else if(operators[0] == "-" && operators[1] == "*") {
-				results = (operands[0] - operands[1]) * operands[2];
-			}
-			//multiply first
-			else if(operators[0] == "*" && operators[1] == "*") {
-				results = (operands[0] * operands[1]) * operands[2];
-			}
-			else if(operators[0] == "*" && operators[1] == "+") {
-				results = (operands[0] * operands[1]) + operands[2];
-			}
-			else {
-				results = (operands[0] * operands[1]) - operands[2];
-			}
+			
 			
 			
 			return results;
