@@ -257,42 +257,6 @@ public class GraphicalCalculatorFrame extends JFrame
 			 *
 			 * Return false if the set operation cannot be done.
 			 */
-			if(selectedRegion == 0) {
-				operands[0] = Integer.parseInt(content);
-			}
-			else if(selectedRegion == 2) {
-				operands[1] = Integer.parseInt(content);
-			}
-			else if(selectedRegion == 4) {
-				operands[2] = Integer.parseInt(content);
-			}
-			else if(selectedRegion == 1) {
-				if(subtract.isSelected()) {
-					content = "-";
-				}
-				else if(add.isSelected()) {
-					content = "+";
-				}
-				else {
-					content = "*";
-				}
-				operators[0] = content;
-			}
-			else if(selectedRegion == 3) {
-				if(subtract.isSelected()) {
-					content = "-";
-				}
-				else if(add.isSelected()) {
-					content = "+";
-				}
-				else {
-					content = "*";
-				}
-				operators[1] = content;
-			}
-			else {
-				return false;
-			}
 			
 			
 			this.repaint();
