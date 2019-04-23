@@ -385,7 +385,7 @@ public class GraphicalCalculatorFrame extends JFrame
     //==================================================================================================================
 
     /** Text field for the user's number input */
-    JTextField operandEntry = new JTextField("0");
+    JTextField operandEntry = new JTextField("0000");
 
     /**
      * Button to attempt to set the selected region in the Graphical panel to the value in the operand
@@ -510,7 +510,7 @@ public class GraphicalCalculatorFrame extends JFrame
         		}
         	}
         	//subtract
-        	else if(subtract.isSelected()) {
+        	if(subtract.isSelected()) {
         		boolean s =	gcPanel.setSelectedRegionContents(subtract.getText());
         		if(s == true) {
         			errorMessage.setText("");
@@ -520,13 +520,13 @@ public class GraphicalCalculatorFrame extends JFrame
         		}
         	}
         	//multiply
-        	else{
+        	if(multiply.isSelected()){
         		boolean m =	gcPanel.setSelectedRegionContents(multiply.getText());
-        		if(m == true) {
-        			errorMessage.setText("");
+        		if(!(m == true)) {
+        			errorMessage.setText("Failed to set operator value");
         		}
         		else {
-        			errorMessage.setText("Failed to set operator value");
+        			errorMessage.setText("");
         		}
         	}
         	
